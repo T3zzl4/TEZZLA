@@ -1,0 +1,66 @@
+.redes{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	min-height:5vh;
+}
+
+.redes ul{
+	position: relative;
+	display: flex;
+}
+
+.redes ul li{
+	position: relative;
+	list-style: none;
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+.redes ul li a{
+	text-decoration: none;
+}
+
+.redes ul li a .fab{
+	font-size: 2em;
+	color: #222;
+}
+
+.redes ul li::before{
+	font-family: fontAwesome;
+	position: absolute;
+	top: -3px;
+	left: 0;
+	font-size: 2em;
+	height: 100%;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+}
+
+/* .redes ul li:nth-child(1)::before{
+	content: '\f099';
+	color: #1da1f2;
+	border-bottom: 2px solid #1da1f2;
+} */
+
+.redes ul li:nth-child(1)::before{
+	content: '\f232';
+	color: #25d366;
+	border-bottom: 2px solid #25d366;
+}
+
+/* .redes ul li:nth-child(3)::before{
+	content: '\f167';
+	color: #ff0000;
+	border-bottom: 2px solid #ff0000;
+} */
+
+.redes ul li:hover::before{
+	height: 0;
+}
+
+@media (max-width: 991px){
+	.redes ul li::before{
+		height: 0;
+	}
+}
