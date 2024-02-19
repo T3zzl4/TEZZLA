@@ -1,0 +1,247 @@
+.row{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+												/*Progreso circular*/
+.mh-skills{
+	position: relative;
+	margin-top: 50px;
+}
+.mh-skills h2 {
+    position: absolute;
+    margin-top: 5vh;
+    top: .3%;
+    left: 43vw;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container{
+	display: flex;
+	justify-content: space-around;
+	color: #000;
+}
+
+.mh-skills .mh-professional-skill{
+	padding-right: 60px;
+	color: black;
+	margin-top: 100px;
+}
+
+.mh-skills .mh-professional-skill h3{
+	font-size: 30px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.mh-professional-skills{
+	padding-left: 20%;
+	margin-top: 100px;
+}
+
+.mh-professional-skills h3{
+	font-size: 30px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: 400;
+	margin-bottom: 10px;
+	/* margin-right: 40px; */
+}
+
+.mh-professional-progress li{
+	display: inline-block;
+	margin: 0 5px;
+	float: none;
+	width: 40%;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.mh-progress{
+	margin-bottom: 10px;
+	font: 900 1.14285/1 Cinzerl, cursive;
+	color: var(--color-principal);
+}
+
+.mh-progress .progressbar-text{
+	color: inherit !important;
+}
+
+.progress.progress-line{
+	height: 10px;
+	margin-right: 60px;
+}
+
+.progress.progress-line .progress-text{
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	width: 60px;
+	transform: translateY(-35%);
+	text-align: center;
+}
+
+.mh-progress.mh-progress-circle{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}
+
+.mh-progress path:nth-child(1){
+	stroke: var(--color-oscuro);
+}
+
+.mh-progress path:nth-child(2){
+	stroke: var(--color-principal);
+}
+
+												/*Progreso lineal*/
+
+.candidatos{
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.candidatos .parcial{
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.candidatos .parcial .info{
+	position: relative;
+}
+
+.candidatos .parcial .info .name{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 15px;
+	font-weight: 600;
+	opacity: 0.9;
+}
+
+.candidatos .parcial .info .percentage-num{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.candidatos .parcial .progressBar{
+	position: relative;
+	width: 100%;
+	height: 7px;
+	margin: 30px 0 2px;
+	border-radius: 10px;
+	background: var(--color-oscuro);
+}
+
+.candidatos .parcial .percentagem{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 7px;
+	border-bottom-right-radius: 100px;
+	background: var(--color-principal);
+	transition: 3s all;
+	animation: 3s progresito;
+}
+
+@keyframes progresito{
+	0%{
+		width: 0;
+	}
+
+	65%{
+		width: 0;
+	}
+
+}
+
+													/*Responsive*/
+
+@media (max-width: 1129px){
+	.pr-skill-name{
+		font-size: 15px;
+	}
+
+}
+
+@media (max-width: 951px){
+
+	.pr-skill-name{
+		font-size: 13px;
+		font-weight: 500;
+	}
+
+	.mh-professional-skills h3{
+		margin-right: 20px;
+	}
+
+}
+
+@media (max-width: 876px){
+	.container{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.mh-skills .mh-professional-skill{
+		padding-right: 0;
+	}
+
+	.mh-professional-skills{
+		margin-top: 40px;
+		padding-left: 10%;
+	}
+
+	.pr-skill-name{
+		font-size: 15px;
+		font-weight: 400;
+	}
+
+}
+
+@media (max-width: 585px){
+	.pr-skill-name{
+		font-size: 12px;
+		font-weight: 500;
+	}
+
+}
+
+@media (max-width: 506px){
+
+	.mh-skills h2{
+		left: 32vw;
+	}
+
+	.mh-professional-skills{
+		text-align: center;
+	}
+
+	.mh-professional-progress{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.mh-professional-skills{
+		padding-left: 2%;
+	}
+
+}
+
+@media (max-width: 350px){
+
+	.mh-skills h2{
+		left: 28vw;
+	}
+}

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url(principal.css);
+@import url(skills.css);
+@import url(about.css);
+@import url(portfolio.css);
+
+/*@import url(proof.css);*/
+@import url(contacto.css);
+@import url(agradecimiento.css);
+@import url(redes.css);
+@import url(footer.css);
+
+
+:root {
+	--color-principal: #DA291C;
+	--color-secundario: ;
+	--color-claro: #f1f1f1;
+	--color-oscuro: #0a0a0a;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+
+*::selection{
+	color: #fff;
+	background: var(--color-principal);
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-principal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 17, 0, 0.918);
+}
+
+section {
+	padding: 100px;
+	overflow: hidden;
+}
+
+button {
+	background: 0 0;
+	border: 2px solid;
+	font: inherit;
+	line-height: 1;
+	margin: .5em;
+	padding: 1em 2em;
+	transition: .25s;
+}
+
+button:focus,
+button:hover {
+	border-color: var(--color-principal);
+	color: #fff
+}
+
+/*Cabecera*/
+
+.cabecera {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s;
+	z-index: 10000;
+}
+
+.cabecera.sticky {
+	background: var(--color-claro);
+	padding: 10px 100px 0 100px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cabecera .logo {
+	transition: .2s;
+}
+
+.cabecera .logo:hover {
+	opacity: .7;
+}
+
+.cabecera.sticky img {
+	filter: invert(1);
+}
+
+.cabecera .navigation {
+	position: relative;
+	display: flex;
+}
+
+.cabecera .navigation li {
+	list-style: none;
+	margin-left: 30px;
+}
+
+.cabecera .navigation li a {
+	color: var(--color-claro);
+	text-decoration: none;
+	font-weight: 300;
+}
+
+.cabecera.sticky .navigation li a {
+	color: var(--color-oscuro);
+}
+
+
+
+/* Buttons animation */
+
+.rolling-text {
+	overflow: hidden;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	line-height: 30px;
+	height: 20px;
+}
+
+.rolling-text:hover .letter,
+.rolling-text.play .letter {
+	transform: translateY(-100%);
+}
+
+.rolling-text .block:last-child {
+	color: #D9281B;
+}
+
+.rolling-text .letter {
+	display: inline-block;
+	transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.letter:nth-child(1) {
+	transition-delay: 0s;
+}
+
+.letter:nth-child(2) {
+	transition-delay: 0.015s;
+}
+
+.letter:nth-child(3) {
+	transition-delay: 0.03s;
+}
+
+.letter:nth-child(4) {
+	transition-delay: 0.045s;
+}
+
+.letter:nth-child(5) {
+	transition-delay: 0.06s;
+}
+
+.letter:nth-child(6) {
+	transition-delay: 0.075s;
+}
+
+.letter:nth-child(7) {
+	transition-delay: 0.09s;
+}
+
+.letter:nth-child(8) {
+	transition-delay: 0.105s;
+}
+
+.letter:nth-child(9) {
+	transition-delay: 0.12s;
+}
+
+.letter:nth-child(10) {
+	transition-delay: 0.135s;
+}
+
+.letter:nth-child(11) {
+	transition-delay: 0.15s;
+}
+
+
+/*Responsive*/
+
+@media (max-width: 991px) {
+
+	section {
+		padding: 100px 50px;
+	}
+
+	.cabecera,
+	.cabecera.sticky {
+		padding: 10px 20px;
+	}
+
+	.cabecera .navigation.active {
+		width: 100%;
+		height: calc(100% - 68px);
+		position: fixed;
+		top: 95px;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: #fff;
+	}
+
+	.cabecera .navigation.active li {
+		list-style: none;
+		margin-left: 0;
+	}
+
+	.cabecera .navigation.active li a {
+		color: #111;
+		font-size: 1.6em;
+	}
+
+	.rolling-text {
+		line-height: 50px;
+		height: 50px;
+	}
+
+	.cabecera .navigation {
+		display: none;
+	}
+
+	.menuToggle {
+		position: relative;
+		width: 40px;
+		height: 40px;
+		background: url(../img/menu.png);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+	}
+
+	.menuToggle.active {
+		background: url(../img/close.png);
+		background-size: 25px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.cabecera.sticky .menuToggle {
+		filter: invert(1);
+	}
+
+	.cabecera {
+		padding: 20px;
+	}
+}
